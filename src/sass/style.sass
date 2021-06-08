@@ -1,0 +1,467 @@
+@import 'main/bootstrap-reboot.min'
+
+*
+    font-family: Montserrat
+    line-height: normal
+
+body, html
+    height: 100%
+
+button:active, button:focus 
+    outline: none
+
+
+.container
+    height: 100%
+    margin-right: auto
+    margin-left:  auto
+    max-width: 1170px
+    padding-right: 10px
+    padding-left: 10px
+
+.player
+    width: 100%
+    max-height: 1009px
+    padding: 32% 17%
+    display: flex
+    position: relative
+    background: url(../img/radio_bkg.png) no-repeat 
+    background-size: contain
+    &__wrapper
+        width: 58%
+        height: 100%
+    &__live
+        display: flex
+        flex-direction: column
+        padding: 11% 10%
+        width: 100%
+        height: 34%
+        background: url(../img/screen_bkg_on.png) no-repeat
+        background-size: contain
+        text-align: left
+        &-line
+            display: flex
+            justify-content: space-between
+        &-text
+            font-size: 12px
+            color: #ffa28d
+        &-time
+            font-size: 14px
+            color: #ffa28d
+        &-title
+            font-size: 16px
+            height: 18px
+            line-height: 16px
+            margin-top: 1%
+            font-weight: 900
+            color: #ff4200
+            position: relative
+            text-align: left
+            overflow: hidden
+            box-sizing: border-box
+        &-duration
+            margin-top: 2%
+            font-size: 12px
+            font-weight: 500
+            text-align: center
+            color: #ff4200
+    &__marquee
+        height: 100%
+        width: 156%
+        display: inline-block
+        position: absolute
+        animation: marquee 10s linear infinite
+        text-align: left
+        &:hover
+            animation-play-state: paused
+    &__cover
+        border: solid 0.5vmin #d8d8d8;
+        border-radius: 5%
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        width: 30%
+        //height: 35%
+    &__song
+        display: flex
+        padding: 1% 7%
+        padding-right: 0
+        &-info
+            width: 65%
+            margin-top: 2%
+            margin-left: 4%
+            &-text
+                margin-bottom: 2%
+                font-size: 12px
+                font-weight: 600
+                line-height: normal
+                text-align: left
+                color: #868685
+                &-next 
+                    display: none
+                span
+                    line-height: 18px
+                    font-size: 14px
+                    font-weight: 800
+                    color: #aeaead
+        &-wrap-text
+            white-space: nowrap
+            overflow: hidden
+            text-overflow: ellipsis
+    &__next-song
+        font-size: 12px
+        font-weight: 600
+        line-height: normal
+        color: #595959
+        padding-left: 7%
+        padding-top: 7%
+        span
+            font-size: 14px
+            color:#707070
+    &__quality
+        width: 42%
+        padding-left: 5%
+        display: flex
+        position: relative
+        background-size: cover
+        background-position: right
+        &-radiator
+            position: absolute
+            z-index: 0
+            width: 86%
+        &-wrap
+            z-index: 999
+            margin-top: 105%
+            display: flex
+            align-items: flex-start
+            justify-content: center
+            img
+                width: 20%
+        &-btn
+            margin: 0 10px
+    &__nav
+        position: absolute
+        bottom: 18%
+        left: 0
+        height: 10%
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        &-play
+            margin-right: 2%
+            width: 8%
+            height: 100%
+            border: none
+            background: url(../icons/btn_play_on.png) no-repeat
+            background-size: cover
+        &-eq
+            margin-right: 2%
+            width: 6%
+            height: 70%
+            border: none
+            background: url(../icons/btn_eq_off.png) no-repeat
+            background-size: cover
+        &-volbar
+            cursor: pointer
+            padding-left: 1%
+            display: flex
+            align-items: center
+            background: url('../img/volume_bkg.png') no-repeat
+            background-size: cover
+            height: 32%
+            width: 19%
+            img
+                margin-right: 3%
+                height: 62%
+        &-vol-progress
+                cursor: pointer
+                width: 80%
+                -webkit-appearance: none
+                background: none
+                &::-webkit-slider-thumb
+                    -webkit-appearance: none
+                    cursor: pointer
+                    height: 16px
+                    width: 16px
+                    background: url(../icons/volume_bkg-08.png) no-repeat
+                    background-size: contain
+    &__eq
+        position: absolute
+        top: 0
+        height: 100%
+        &-mobwrap 
+            display: none
+        &-balance
+            position: relative
+            z-index: 0
+            margin: 0 auto
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 50%
+            height: 44%
+            background-image: url('../icons/balance_scale.png')
+            background-repeat: no-repeat
+            background-size: cover
+            &-range
+                background-image: url('../icons/balance_cnob.png')
+                background-size: cover
+                width: 85%
+                height: 75%
+        &-select
+            position: relative
+            height: 20%
+            &-btn
+                position: relative
+                z-index: 999
+                display: block
+                width: 70%
+                height: 55%
+                padding-left: 5%
+                background: none
+                border: none
+                background-image: url('../icons/eq_preset_list_close.png')
+                background-size: cover
+                background-repeat: no-repeat
+                margin: 0 auto
+                text-align: left
+                font-family: myriad-pro,sans-serif;
+                -webkit-text-stroke: .5px #070606;
+                color: #fff;
+                font-size: 12px;
+            &-wrap
+                z-index: 1
+                position: absolute
+                //display: flex
+                display: none
+                flex-direction: column
+                left: 50%
+                padding-top: 14%
+                transform: translateX(-50%)
+                margin: 0 auto
+                font-family: myriad-pro,sans-serif
+                -webkit-text-stroke: .5px #070606
+                color: #fff
+                font-size: 12px
+                background-image: url('../icons/eq_preset_list_open.png')
+                background-size: cover
+                top: 0
+                height: 348%
+                width: 70%
+            &-item
+                margin-top: 4%
+                margin-bottom: 3%
+                padding-left: 5%
+                cursor: pointer 
+        &-controls
+            position: absolute
+            right: 0
+            height: 100%
+            width: 35%
+            display: flex
+            flex-direction: column
+            &-switch
+                font-family: myriad-pro,sans-serif
+                -webkit-text-stroke: .5px #070606
+                color: white
+                font-size: 14px
+                height: 33%
+                width: 70%
+                margin: 0 auto
+                display: flex
+                align-items: center
+                justify-content: space-between
+                position: relative
+                input
+                    display: none
+                    &:checked + .player__eq-controls-slider::before
+                        left: 42%
+            &-slider
+                display: inline-block
+                cursor: pointer
+                background-image: url('../icons/eq_on_bkg.png')
+                background-size: cover
+                width: 36% 
+                transform: translate(0)
+                height: 32%
+                transition: .3s
+                &::before
+                    position: absolute
+                    content: ''
+                    height: 80%
+                    width: 43%
+                    bottom: 0
+                    transform: translate(17%, -12%)
+                    left: 0
+                    background-image: url('../icons/volume_bkg-08.png')
+                    background-size: cover 
+                    -webkit-transition: .3s
+                    transition: .3s
+        &-bg 
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        &-link
+            position: absolute
+            z-index: 999
+            left: 50%
+            transform: translateX(-50%)
+            bottom: -8%
+            text-align: center
+            font-size: 12px
+            color: grey
+            cursor: pointer
+            &:hover
+                color: white
+        &-icon
+            position: absolute
+            cursor: pointer
+            right: -5%
+            top: -10%
+            height: 7%
+            width: 7%
+            img
+                height: 100%
+        &-wrap
+            transform: rotate(-90deg)
+            position: absolute
+            left: -15.2%
+            top: 3.5%
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding-right: 16%
+            height: 58%
+            width: 100%
+            justify-content: center
+        &-iwrap
+            margin: 1.65% 0
+            position: relative
+            display: flex
+            flex-direction: row-reverse
+            align-items: center
+            justify-content: center
+            width: 49%
+            input
+                cursor: pointer
+                background: none
+                padding: 0 5px
+                width: 100%
+                height: 100%
+                -webkit-appearance: none;
+                &::-webkit-slider-thumb
+                    cursor: pointer
+                    -webkit-appearance: none
+                    width: 52px
+                    height: 25px
+                    background: url(../icons/eq_btn.png) no-repeat
+                    background-size: cover
+            span
+                font-family: myriad-pro, sans-serif
+                -webkit-text-stroke: 0.5px #070606
+                color: white
+                font-size: 12px
+                width: 12px
+                position: absolute
+                left: -10px
+                text-align: center
+                transform: rotate(90deg)
+        &-img
+            opacity: 0  
+            width: 83%
+            height: 100%
+
+.player__eq-big-num
+    top: -5px
+
+.play-btn_pause
+    background: url(../icons/btn_play_off.png) no-repeat;
+    background-size: cover; 
+            
+#player__eq 
+    display: none
+    position: relative
+    flex-direction: column
+    width: 100%
+    height: 100%
+    
+
+#player__wrap
+    width: 100%
+    height: 100%
+    display: flex
+    position: relative
+
+@keyframes marquee 
+    0%    
+        transform: translate(100%, 0)
+    100%
+        transform: translate(-100%, 0)
+
+@import 'main/_variables.scss'
+@import 'main/_mixins.scss'
+@import 'main/_media.scss'
+
+.player-min
+    background: url(../img/min-bg.png)
+    background-repeat: no-repeat
+    background-size: cover
+    position: fixed
+    bottom: 0
+    height: 50px
+    padding: 0
+    & .container
+        width: 1170px
+    &__wrap 
+        display: flex
+        height: 100%
+        justify-content: space-between
+        align-items: center
+        &-block
+            display: flex
+            align-items: center
+    &__duration
+        margin-right: 5px
+        font-weight: 500;
+        color: grey;
+        font-size: 16px
+        margin-top: 0
+        width: 72px
+    &__cover
+        margin-right: 5px
+        border: none
+        height: 45px
+        width: 45px
+        border-radius: 7px
+    &__play
+        margin: 0
+        padding: 0
+        height: 35px
+        width: 35px
+        background: url(../icons/buttom_play_on.png) no-repeat
+        background-size: cover
+    & .play-btn_pause
+        background: url(../icons/buttom_play_off.png) no-repeat
+        background-size: cover
+    &__text
+        margin-left: 10px
+        text-shadow: 0px 2px 0 #2a2a2a;
+        font-size: 14px
+        font-weight: 800
+        color: #dddddd
+        &-span
+            font-weight: 500;
+            color: #dddddd;
+    &__volbar
+        transform: translateY(2px)
+        height: 25px
+        width: 173px
+
+@media ( max-width: 425px ) 
+    .player-min__volbar 
+        display: none
+        opacity: 0
+    
+
+    

@@ -1,0 +1,378 @@
+@media (max-width: 1024px) {
+    .player__eq-iwrap {
+        margin: 2.55% 0;
+        input {
+            &::-webkit-slider-thumb {
+                width: 20px;
+                height: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .player__eq-iwrap {
+        margin: 2.2% 0;
+    }
+}
+
+@media (min-width: 1150px) {
+    .player {
+        &__nav {
+            bottom: 13%
+        }
+    }
+}
+
+@media (max-width: 1180px) {
+    .player {
+        &__live {
+            &-text {
+                font-size: 10px
+            }
+            &-time {
+                font-size: 12px
+            }
+            &-title {
+                font-size: 16px;
+            }
+            &-duration {
+                font-size: 10px;
+            }
+        }
+        &__song {
+            &-info {
+                &-text {
+                    font-size: 10px;
+                    span {
+                        line-height: 14px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        &__next-song {
+            font-size: 10px;
+            span {
+                font-size: 12px;
+            }
+        } 
+        &__nav {
+            &-play {
+                width: 9%;
+            }
+        }   
+    }
+}
+
+@media (max-width: 950px) {
+    .player {
+        &__live {
+            &-text {
+                line-height: 8px;
+                font-size: 8px
+            }
+            &-time {
+                line-height: 8px;
+                font-size: 10px
+            }
+            &-title {
+                font-size: 14px;
+            }
+            &-duration {
+                font-size: 8px;
+            }
+        }
+        &__song {
+            &-info {
+                &-text {
+                    font-size: 8px;
+                    span {
+                        line-height: 12px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        &__next-song {
+            font-size: 8px;
+            span {
+                font-size: 10px;
+            }
+        }    
+    }
+}
+
+@media (max-width: 826px) {
+    .player {
+        &__live {
+            &-title {
+                margin-top: 0;
+                font-size: 9px;
+            }
+            &-duration {
+                margin: 0;
+            }
+        }
+        &__song {
+            padding-top: 0;
+        }
+        &__next-song {
+            padding-top: 1%;
+        }
+        &__nav {
+            &-vol-progress {
+                &::-webkit-slider-thumb {
+                    height: 10px;
+                    width: 10px;
+                }
+            }
+        }  
+    }
+}
+
+@media (max-width: 660px) {
+    .player {
+        &__live {
+            padding: 9%;
+            &-title {
+                font-size: 10px;
+            }
+            &-time {
+                font-size: 6px;
+            }
+            &-text {
+                font-size: 6px;
+            }
+        }
+        &__song {
+            &-info {
+                &-text {
+                    span {
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+        &__next-song {
+            padding-top: 0;
+        }
+    }
+
+    .player__eq-iwrap {
+        margin: 2.1% 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .player {
+        &__live {
+            &-text {
+                font-size: 4px
+            }
+            &-time {
+                font-size: 6px
+            }
+            &-title {
+                line-height: 8px;
+                font-size: 6px;
+            }
+            &-duration {
+                font-size: 6px;
+            }
+        }
+        &__song {
+            &-info {
+                &-text {
+                    font-size: 6px;
+                    span {
+                        line-height: 6px;
+                        font-size: 6px;
+                    }
+                }
+            }
+        }
+        &__next-song {
+            font-size: 4px;
+            span {
+                font-size: 6px;
+            }
+        }
+           
+    }
+
+    .player__eq-iwrap {
+        margin: 1.2% 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #player__wrap {
+        height: 100%;
+    }
+    .player {
+        background-size: contain;
+        &__wrapper {
+            width: 100%;
+            height: 100%;
+        }
+        &__cover {
+            width: 80px;
+            height: 80px;
+        }
+        &__live {
+            width: 100%;
+            height: 80px;
+            display: block;
+            background-size: 100% 100%;
+            margin: 0 auto;
+            padding: 0 10%;
+            padding-top: 7%;
+            &-text {
+                font-size: 12px;
+            }
+            &-time {
+                font-size: 12px;
+            }
+            &-duration {
+                font-size: 12px;
+            }
+            &-title {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+            }
+        }
+        &__quality {
+            display: none;
+        }
+        &__nav {
+            bottom: 18%;
+        }
+        &__next-song {
+            padding: 0;
+            text-align: center;
+        }
+        &__song-info-text {
+            &-next {
+                display: block;
+            }
+            font-size: 12px;
+            span {
+                font-size: 14px;
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                display: none;
+            }
+            
+        }
+        &__next-song {
+            display: none;
+        }
+        &__eq {
+            &-controls {
+                position: relative;
+                z-index: 999;
+                flex-direction: column-reverse;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: center;
+            }
+            &-balance {
+                margin-right: 5%;
+                width: 29%;
+                height: 74%;
+                &-range {
+                    width: 86%;
+                }
+            }
+            &-select {
+                height: 26%;
+                &-btn {
+                    width: 82%;
+                    height: 100%;
+                }
+                &-wrap {
+                    width: 82%;
+                    padding-top: 18%;
+                    height: 670%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+            &-wrap {
+                display: none;
+            }
+            &-bg {
+                opacity: 0;
+            }
+            &-controls {
+                width: 100%;
+                height: 100%;
+                &-switch {
+                    margin-top: 10%;
+                    font-size: 12px;
+                    justify-content: space-around;
+                }
+                &-slider {
+                    width: 30%;
+                    height: 78%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .player {
+        &__nav {
+            bottom: 19%;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .player {
+        &__nav {
+            bottom: 16%;
+        }
+        &__live {
+            height: 45px;
+            &-line {
+                display: none;
+            }
+            &-duration {
+                display: none;
+            }
+        }
+        &__cover {
+            width: 40px;
+            height: 40px;
+        }
+        &__song-info-text {
+            font-size: 8px;
+            span {
+                font-size: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 324px) {
+    .player {
+        &__nav {
+            bottom: 20%;
+        }
+        &__eq {
+            &-controls {
+                &-switch {
+                    font-size: 7px;
+                }
+            }
+        } 
+    }
+}
+    
